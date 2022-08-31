@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quizz{% endblock %}
+
+{% block body %}    
+<div class="root">
+    <div class="rootHead">
+        <h1 class="questionTitle">{{ question.content }}</h1>
+    </div>
+    <div class="diagonalBackground">
+        <div class="diagonalRight"></div>
+        <div class="diagonalLeft"></div>
+    </div>
+    <div class="polygons">
+        <div class="polyLeft colorA">
+            <picture class="imageQ1">
+                <img src="{{ asset('./assets/images/media/bgpolygons-white.77263344.svg')}}" alt="polygones blancs">
+            </picture>
+        </div>
+        <div class="polyRight colorB">
+            <picture class="imageQ1">
+                <img src="{{ asset('./assets/images/media/bgpolygons-white.77263344.svg')}}" alt="polygones noirs">
+            </picture>
+        </div>
+    </div>
+    <div class="cardWrapper">
+        <div class="binaryCard">
+            <picture class="imageQ1">
+                <img class="img-fluid" src="{{ asset('./assets/images/media/noir-blanc.png')}}" alt="carte avec un coté noir et un coté blanc">
+            </picture>
+            <form action="{{ path('app_quizz_type') }}" method="POST">
+                <div class="diagonalLinks">
+                    <div class="diagonalIn">
+                        {% for answer in answers %}
+                            {% if answer.id == 2 %}
+                                <button type="submit" name="answer1" id="{{ answer.content }}" value="{{ answer.content }}" class="btnAnswer1 triangleLeft" style="margin-top: 3px; margin-bottom: 0px;">
+                                    <div class="ButtonAnswer1"></div>
+                                </button>
+                            {% endif %}
+                            {% if answer.id == 1 %}
+                                <button type="submit" name="answer1" id="{{ answer.content }}" value="{{ answer.content }}" class="btnAnswer1 triangleRight" style="margin-top: 3px; margin-bottom: 0px;">
+                                    <div class="ButtonAnswer1"></div>
+                                </button>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% for answer in answers %}
+                    {% if answer.id == 2 %}
+                        <div class="answerLeft">
+                            <button type="submit" name="answer1" id="{{ answer.content }}" value="{{ answer.content }}" class="btnAnswer1 " style="margin-top: 3px; margin-bottom: 0px;">
+                                <div class="ButtonAnswer1">{{ answer.content }}</div>
+                            </button>
+                        </div>
+                    {% endif %}
+                    {% if answer.id == 1 %}
+                        <div class="answerRight">
+                            <button type="submit" name="answer1" id="{{ answer.content }}" value="{{ answer.content }}" class="btnAnswer1 " style="margin-top: 3px; margin-bottom: 0px;">
+                                <div class="ButtonAnswer1">{{ answer.content }}</div>
+                            </button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

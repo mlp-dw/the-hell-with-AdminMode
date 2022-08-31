@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre Modèle{% endblock %}
+
+{% block body %}
+
+    <div class="resultTitle">
+        <div class="encouragement">Bravo !</div>
+        <h1 class="p-1">Votre modèle</h1>
+        <img class="pb-5 img-fluide" src="{{ asset('assets/images/' ~ answer1 ~ ' ' ~ answer2 ~ ' ' ~ answer3 ~ ' ' ~ answer4 ~ ' ' ~ answer5 ~ '.png') }}" alt="le résultat de votre quizz" />
+        <a class="btn btn-outline-light my-2 mb-5" href="{{ path('app_contact') }}">Contactez notre créatrice</a>
+    </div>
+  
+{% endblock %}

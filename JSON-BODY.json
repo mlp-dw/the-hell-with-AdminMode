@@ -1,0 +1,14 @@
+$quizz = [
+    "quizz" => [
+        "id" => $quizz->setId(),
+        "user" => [
+            "id"=> $userRepository->getId(),
+            "email"=> $userRepository->getEmail(),
+        ],
+        "result" => $resultRepository->getContent(),
+        "created_at"=> $quizz->setCreatedAt(),
+    ]
+];
+$json = json_encode($quizz);
+
+

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Modèles{% endblock %}
+
+{% block body %}
+    <div class="account">
+
+        <div>
+            <h1 class="p-3">Mes Modèles</h1>
+            <div class="models-account">
+                {% for quizz in quizzs %}
+                    <div class="card__collection clear-fix">
+                        <div class="cards card--model">
+                            <img src="{{ asset('assets/images/' ~ quizz.result)}}" alt="{{quizz.result}}" class="img-responsive" />
+                            <span class="card--model__rect-1">
+                                <span class="shadow-1"></span>
+                                <a href="{{ asset('assets/images/' ~ quizz.result)}}" download class="btn btn-outline-light btn--ddl">Télécharger</a>
+                            </span>
+                            <span class="card--model__rect-2">
+                                <span class="shadow-2"></span>
+                            </span>
+                            <span class="card--model__circle"></span>
+                            <div class="card--model__suppr">
+                            {{ include('quizz/_delete_form.html.twig') }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {{ include('user/_nav-panel.html.twig') }}
+    </div>
+    
+    
+{% endblock %}

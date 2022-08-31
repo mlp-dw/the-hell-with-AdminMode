@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez nous{% endblock %}
+
+{% block body %}
+
+    <div class="contact bgContact">
+    
+    {{ form_start(form) }}
+    
+          <h3>Contactez-nous</h3>
+            <div>
+                <div>
+                    <p class="pe-4">Adresse</p>
+                    <p>Route de Paris, La Pacaudière</p>
+                </div>
+
+                <div>
+                    <p>Un coup de main ?</p>
+                    <p>E-mail: contact@ecla.com<br>Phone: 061 294 8197</p>
+                </div>
+
+            </div>
+
+            <div class="form">
+                <div class="info-contact">
+                    <div class="name">
+                        {{ form_label(form.name, 'Votre Nom') }}
+                        {{ form_widget(form.name) }}
+                    </div>
+                    <div class="email">
+                        {{ form_label(form.email, 'Votre Email') }} 
+                        {{ form_widget(form.email) }}
+                    </div>
+                </div>
+                <div class="textarea">
+                    {{ form_label(form.message, 'Votre Message') }} 
+                    {{ form_widget(form.message) }}
+                </div>
+                <div class="submit">
+                    <button class="button2 button--tamaya button--round-s button--text-thick button--border-thin" data-text="Envoyer">{{ button_label|default('Envoyer') }}</button>
+                </div>
+            </div>
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+
+    <div class="container tall">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class='d-flex flex-row align-items-center'>
+                    <a class="btn btn-outline-light me-4" href="{{ path('app_profile') }}">Retour</a>
+                    <!-- petits points-->
+                    {{ include('user/_pointsCloud.html.twig') }}
+                </div>
+                <div class="gallery-wrapper me-lg-70 animated" data-show="startbox" style=" transform: translateY(0px); transition-duration: 500ms;  opacity: 1; " >
+                    <img class='w-75' src="{{ asset('assets/images/media/bunny2.png')}}" alt="" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1>Modifier vos informations</h1>
+                {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

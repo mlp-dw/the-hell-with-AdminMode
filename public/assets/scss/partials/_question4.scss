@@ -1,0 +1,33 @@
+.bgQ4{
+    background: rgb(30,41,59);
+    background: linear-gradient(180deg, rgba(30,41,59,1) 0%, rgba(15,20,26,1) 20%, rgba(15,20,26,1) 100%);
+}
+
+.btn4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2%;
+    left:5%;
+    right: 5%;
+    z-index: auto;
+    text-align: center;
+    margin: auto;
+}
+.question4 {
+	letter-spacing: 1.5px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: auto 0;
+	padding: 1%;
+}
+.textureCarousel{
+    width: 19%;
+}
+.textureSelectImg{
+    width: 90%;
+	height: 10px;
+	object-fit: cover;
+}

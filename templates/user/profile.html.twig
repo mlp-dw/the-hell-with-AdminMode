@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+
+    <div class="account tall">
+        <div>
+            <h1 class="p-3 me-5">Coucou {{ user.name }}</h1>
+            <div class="pt-90 pb-90 shape-parent profile">
+            <!-- Shape-->
+                <div class="shape justify-content-start align-items-end">
+                    <img class='img-fluid' src="{{ asset('assets/images/media/bunny.png')}}" alt="" >
+                </div>
+                    
+                    <div class="container">
+                        <div class="row gy-70">
+                            <div class="col-lg-5">
+                                <h2>C'est ici que tu vas pouvoir gérer ton compte !</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{ include('user/_nav-panel.html.twig') }}
+    </div>
+    
+{% endblock %}

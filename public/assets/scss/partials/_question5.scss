@@ -1,0 +1,446 @@
+.themeSelect {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	button {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+}
+.themeSelection {
+	display: flex;
+	display: flex;
+	justify-content: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: row;
+	padding-bottom: 50px;
+	position: relative;
+	align-items: center;
+}
+.themeSelectImg {
+	width: 90%;
+	height: 52vh;
+	object-fit: cover;
+}
+img {
+	transition: all .25s ease-in-out;
+	border-style: none;
+}
+.themeSelectText {
+	bottom: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.themeSelectIndex {
+	width: 23px;
+	min-width: 23px;
+	height: 23px;
+	min-height: 23px;
+	position: relative;
+	margin-top: 20px;
+}
+.btnSelect {
+	margin-top: 15px !important;
+	padding: 18px 31px;
+	text-transform: uppercase;
+	box-shadow: inset 0 0 0 1px white;
+	background-color: transparent;
+	padding: 14px 31px;
+	color: #fff;
+	box-shadow: inset 0 0 0 1px white;
+	font-size: 12px;
+	border-radius: 30px;
+	border-width: 0;
+	min-width: 200px;
+	display: inline-block;
+	text-align-last: center;
+	font-weight: 700;
+	line-height: 1.18;
+	letter-spacing: 1.1px;
+	transition: background-color .3s ease-in-out;
+	&:focus {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px white;
+	}
+	&:hover {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px white;
+	}
+}
+.element{
+    width: 15%;
+    position: absolute;
+    bottom: 28%;
+    left: 19%;
+    z-index: auto;
+    text-align: center;
+    margin: auto;
+}
+.element:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite; 
+}
+.element2{
+    width: 15%;
+    position: absolute;
+    bottom: 28%;
+    left: 34.5%;
+    z-index: auto;
+    text-align: center;
+    margin: auto;
+}
+.element2:hover {
+    animation: shake3 2s;
+    animation-iteration-count: infinite; 
+}
+.element3{
+    width: 15%;
+    position: absolute;
+    bottom: 27%;
+    right:34%;
+    z-index: auto;
+    text-align: center;
+    margin: auto;
+}
+.element3:hover {
+    animation: shake3 2s;
+    animation-iteration-count: infinite; 
+}
+.element4{
+    width: 15%;
+    position: absolute;
+    bottom: 27%;
+    right: 19%;
+    z-index: auto;
+    text-align: center;
+    margin: auto;
+}
+.element4:hover {
+    animation: shake4 2s;
+    animation-iteration-count: infinite; 
+} 
+@keyframes shake {
+    0% { transform: rotate(-25deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform:  rotate(-25deg); }
+}  
+@keyframes shake3 {
+    0% { transform: rotate(-15deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform:  rotate(-15deg); }
+}
+@keyframes shake4 {
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform:  rotate(-10deg); }
+}
+
+@media screen and (max-width: 1875px) {
+	.themeSelect {
+        .element{
+			left: 18%;
+        }
+	}
+}
+@media screen and (max-width: 1845px) {
+	.themeSelect {
+		.element2{
+			left: 34%;
+		}
+		.element4{
+			right: 18%;
+		}
+	}
+}
+@media screen and (max-width: 1790px) {
+	.themeSelect {
+        .element{
+			left: 17%;
+        }
+		.element3{
+			right: 33%;
+		}
+	}
+}
+@media screen and (max-width: 1745px) {
+	.themeSelect {
+        .element{
+			left: 16%;
+        }
+		.element2{
+			left: 33.5%;
+		}
+		.element4{
+			right: 17%;
+		}
+	}
+}
+@media screen and (max-width: 1700px) {
+	.themeSelect {
+		.element{
+			left: 15%;
+        }
+		.element4{
+			right: 16%;
+		}
+	}
+}
+@media screen and (max-width: 1650px) {
+	.themeSelect {
+		.element{
+			left: 14%;
+        }
+		.element2{
+			left: 33%;
+		}
+		.element3{
+			right: 32%;
+		}
+		.element4{
+			right: 15%;
+		}
+	}
+}
+@media screen and (max-width: 1600px) {
+	.themeSelect {
+		.element{
+			left: 13%;
+        }
+		.element2{
+			left: 32.5%;
+		}
+		.element4{
+			right: 14%;
+		}
+	}
+}
+@media screen and (max-width: 1550px) {
+	.themeSelect {
+		.element{
+			left: 12%;
+        }
+		.element2{
+			left: 32%;
+		}
+		.element3{
+			right: 31%;
+		}
+		.element4{
+			right: 13%;
+		}
+	}
+}
+@media screen and (max-width: 1500px) {
+	.themeSelect {
+		.element{
+			left: 11%;
+        }
+		.element4{
+			width: 16%;
+			right: 12%;
+		}
+	}
+}
+@media screen and (max-width: 1450px) {
+	.themeSelect {
+		.element{
+			left: 10%;
+        }
+		.element2{
+			left: 31.5%;
+		}
+		.element3{
+			right: 30.5%;
+		}
+		.element4{
+			width: 17%;
+			right: 11%;
+		}
+	}
+}
+@media screen and (max-width: 1400px) {
+	.themeSelect {
+		.element4{
+			right: 10%;
+		}
+	}
+}
+@media screen and (max-width: 1350px) {
+	.themeSelect {
+		.element{
+			left: 9%;
+        }
+		.element2{
+			left: 31%;
+		}
+		.element3{
+			right: 30%;
+		}
+		.element4{
+			right: 9%;
+		}
+	}
+}
+@media screen and (max-width: 1300px) {
+	.themeSelect {
+		.element{
+			left: 7%;
+        }
+		.element2{
+			left: 30.5%;
+		}
+		.element4{
+			width: 18%;
+			right: 7%;
+		}
+	}
+}
+@media screen and (max-width: 1250px) {
+	.themeSelect {
+		.element{
+			left: 6%;
+        }
+		.element2{
+			left: 30%;
+		}
+		.element3{
+			right: 29%;
+		}
+		.element4{
+			right: 6%;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.themeSelect {
+		.element{
+			width: 18%;
+			left: 3%;
+        }
+		.element2{
+			left: 29.5%;
+		}
+		.element4{
+			width: 20%;
+			right: 3%;
+		}
+	}
+}
+@media screen and (max-width: 1150px) {
+	.themeSelect {
+		.element{
+			width: 19%;
+			left: 1%;
+        }
+		.element2{
+			left: 29%;
+		}
+		.element3{
+			right: 28%;
+		}
+		.element4{
+			width: 20%;
+			right: 3%;
+		}
+	}
+}
+@media screen and (max-width: 1080px) {
+	.themeSelect {
+		.element4{
+			width: 21%;
+			right: 1%;
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.themeSelect {
+		.element{
+			width: 21%;
+			left: -1%;
+        }
+		.element4{
+			width: 23%;
+			right: 0%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.themeSelect {
+		flex-direction: column;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+        .element{
+            width:45%;
+            position: absolute;
+            top: -54%;
+            left: -0%;
+            right: 5%;
+        }
+        .element2{
+            width: 50%;
+            position: absolute;
+            top: -3%;
+            left: -4%;
+            right: -0%;
+        }
+        .element3{
+            width: 40%;
+            position: absolute;
+            bottom: 31%;
+            left: -0%;
+            right: -6%;
+        }
+        .element4{
+            width: 45%;
+            position: absolute;
+            bottom: 8%;
+            left: -3%;
+            right: -0%;
+        }
+	}
+	.themeSelection {
+		display: flex;
+		display: flex;
+		flex-direction: column;
+		flex-direction: column;
+		justify-content: center;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 414px) {
+	.themeSelect {
+		.element{
+			width: 55%;
+		}
+        .element2{
+            top: -5%;
+        }
+		.element3{
+			bottom: 32%;
+		}
+        .element4{
+            width: 55%;
+        }
+	}
+}
+@media screen and (max-width: 375px) {
+	.themeSelect {
+        .element2{
+            top: -6%;
+        }
+        .element3{
+            bottom: 33%;
+        }
+        .element4{
+            bottom: 9%;
+        }
+	}
+}

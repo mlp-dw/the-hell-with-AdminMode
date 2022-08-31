@@ -1,0 +1,33 @@
+.resultTitle {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/media/bgbunny.png');
+    
+}
+.encouragement {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: Mason Sans OT,serif;
+    text-transform: uppercase;
+    letter-spacing: 1.85px;
+    color: #dfdbd9;
+    font-weight: 700;
+}
+.resultTitle {
+    img{
+        width: 25%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .resultTitle {
+        img{
+            width: 50%;
+        }
+    }
+}

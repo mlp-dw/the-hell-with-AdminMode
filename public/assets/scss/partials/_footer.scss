@@ -1,0 +1,39 @@
+footer{
+    background-color: $bg;
+    z-index: -200;
+}
+@keyframes bang {
+  from {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+.hoverme {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  span {
+    color: #333;
+    font-size: .9em;
+  }
+  i {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 5px;
+    background: red;
+    opacity: 0;
+  }
+  &:hover {
+    @for $i from 1 through 50 {
+      i:nth-of-type(#{$i}) {
+        transform: translate3d(random(190) - 100 + px,random(50) - 100 + px,0) rotate(random(360) + deg);
+        background: hsla(random(360),100%,50%,1);
+        animation: bang 700ms ease-out forwards;
+        opacity: 0;
+      }
+    }
+  }
+}

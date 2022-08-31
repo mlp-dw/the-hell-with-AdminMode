@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Question{% endblock %}
+
+{% block body %}
+<div class="bgQ4">
+    <h2 class="question4">
+        {{ question.content }}
+    </h2>
+
+    <form action="{{ path('app_quizz_theme') }}" method="POST" class="d-flex justify-content-center">
+        <input type="hidden" name="answer1" value={{answer1}} />
+        <input type="hidden" name="answer2" value={{answer2}} />
+        <input type="hidden" name="answer3" value={{answer3}} />
+
+        <div id="carouselExampleIndicators" class="carousel slide textureCarousel" data-bs-ride="carousel">
+            <div class="carousel-inner mb-4">
+                {% for answer in answers %}
+                    {% if answer.id == 7 %}
+                        <div class="carousel-item active">
+                            <img src="{{ asset('./assets/images/media/opaqueBunny.png')}}" class="d-block w-100" alt="lapin caché dans un tas de feuille" class="textureSelectImg">
+                            <div class="btn4">
+                                <button type="submit" name="answer4" value="{{ answer.content }}" class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                    <div>{{ answer.content }}</div>
+                                </button>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if answer.id == 8 %}
+                        <div class="carousel-item">
+                            <img src="{{ asset('./assets/images/media/ajouréeBunny.png')}}" class="d-block w-100" alt="lapin essuie ses oreilles derrière quelques branches" class="textureSelectImg">
+                            <div class="btn4">
+                                <button type="submit" name="answer4" value="{{ answer.content }}" class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                    <div>{{ answer.content }}</div>
+                                </button>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </form>
+
+</div>    
+{% endblock %}

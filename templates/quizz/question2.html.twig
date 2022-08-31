@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Question{% endblock %}
+
+{% block body %}
+<div>
+    <h2 class="bgQ2 question2">
+        {{ question.content }}
+    </h2>
+    <form action="{{ path('app_quizz_length') }}" method="POST" class="bg-black">
+        <input type="hidden" name="answer1" value={{answer1}} />
+        
+        <div class="typeSelection">
+            {% for answer in answers %}
+                {% if answer.id == 3 %}
+                    <div class="typeSelect">
+                        <img class="typeSelectImg img-fluid" src="{{ asset('./assets/images/media/libertéBunnyFree.png')}}" alt="silhouette de lapin devant la lune" />
+                        <div class="typeSelectText free">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer2" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if answer.id == 4 %}
+                    <div class="typeSelect">
+                        <img class="typeSelectImg img-fluid" src="{{ asset('./assets/images/media/confortBunnyBath.png')}}" alt="silhouette de lapin un verre à la patte prenant un bain"/> 
+                        <div class="typeSelectText">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer2" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre Expertise{% endblock %}
+
+{% block body %}
+<div class="quote text-center my-5 p-3 quote">
+    "Forte de mes expériences chez Dior, Chanel, Schiapparelli ou encore Valentino, je mets à votre disposition un moyen unique de concevoir une tenue qui 
+    vous ressemble." 
+</div>
+
+<div class="row m-5 d-flex justify-content-center">         
+    <div class="col-12 col-sm-4 col-lg-8">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/images/gallery/8.PNG')}}" class="col-md-12 mb-3 text-center img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 d-flex flex-column">
+                <img src="{{ asset('assets/images/gallery/23.PNG')}}" class="col-md-12 mb-3 text-center img-fluid" alt="">
+            </div>
+            <img src="{{ asset('assets/images/gallery/19.PNG')}}" class="col-md-12 mb-3 text-center img-fluid" alt="">
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/images/gallery/11.PNG')}}" class="img-fluid mb-3" alt="">
+                <img src="{{ asset('assets/images/gallery/28.PNG')}}" class="w-100 img-fluid mb-3" alt="">
+                <img src="{{ asset('assets/images/gallery/32.PNG')}}" class="w-100 img-fluid mb-3" alt="">
+            </div>
+            <div class="col-lg-6 d-flex flex-column">
+                <img src="{{ asset('assets/images/gallery/26.PNG')}}" class="img-fluid mb-3" alt="">
+                <img src="{{ asset('assets/images/gallery/17.PNG')}}" class="img-fluid mb-3" alt="">
+            </div>
+        </div>
+        <div class='responsive-gallery-col1'>
+            <img src="{{ asset('assets/images/gallery/29.PNG')}}" class="col-lg-12 img-fluid mb-3" alt="">
+            <img src="{{ asset('assets/images/gallery/25.PNG')}}" class="rightImg col-lg-12 img-fluid mb-3" alt="">
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-4 col-lg-4 responsive-gallery-col2">
+        <img src="{{ asset('assets/images/gallery/15.PNG')}}" class="col-lg-12 img-fluid pb-3 item1" alt="">
+        <img src="{{ asset('assets/images/gallery/16.PNG')}}" class="col-lg-12 img-fluid mb-3 item2" alt="">
+        <img src="{{ asset('assets/images/gallery/13.PNG')}}" class="col-lg-12 img-fluid mb-3 item3" alt="">
+        <img src="{{ asset('assets/images/gallery/22.PNG')}}" class="col-lg-12 img-fluid mb-3 item4" alt="">
+        <img src="{{ asset('assets/images/gallery/14.PNG')}}" class="col-lg-12 img-fluid mb-3 item5" alt="">
+        <img src="{{ asset('assets/images/gallery/20.PNG')}}" class="col-lg-12 img-fluid mb-3 item6" alt="">
+        <img src="{{ asset('assets/images/gallery/3.PNG')}}" class="col-lg-12 img-fluid mb-3 item7" alt="">
+        <img src="{{ asset('assets/images/gallery/5.PNG')}}" class="col-lg-12 img-fluid mb-3 item8" alt="">
+        {# <img src="{{ asset('assets/images/gallery/4.PNG')}}" class="col-lg-12 img-fluid mb-3" alt=""> #}
+    </div>
+</div>
+
+
+{% endblock %}

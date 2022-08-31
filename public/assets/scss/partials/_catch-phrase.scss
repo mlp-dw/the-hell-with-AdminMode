@@ -1,0 +1,21 @@
+.catch-phrase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    color: $text-color;
+    h1{
+        font-weight: bolder;
+        padding: 0.5%;
+        span{
+            color: darkblue;
+        }
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2%;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="nav-panel-account">
+    {% if "ROLE_ADMIN" in user.roles %}
+        <a class="btn btn-outline-light mt-2 mb-1" href="{{ path('app_user_index') }}">Les utilisateurs</a>
+        <a class="btn btn-outline-light mt-2 mb-1" href="{{ path('app_register') }}">Ajouter un utilisateur</a>
+        <a class="btn btn-outline-light mt-2 mb-1" href="{{ path('app_modeles') }}">Mes créations</a>
+        <a class="btn btn-outline-light my-2" href="{{ path('app_user_edit', {'id': user.id}) }}">Mes informations</a>
+        {{ include('user/_delete_form.html.twig') }}
+         <p>je suis le big boss </p>
+    {% else %}
+        <a class="btn btn-outline-light mt-2 mb-1" href="{{ path('app_modeles') }}">Mes créations</a>
+        <a class="btn btn-outline-light my-2" href="{{ path('app_user_edit', {'id': user.id}) }}">Mes informations</a>
+        {{ include('user/_delete_form.html.twig') }}
+    {% endif %}
+</div>

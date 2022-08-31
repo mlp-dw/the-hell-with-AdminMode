@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Question{% endblock %}
+
+{% block body %}
+    <h2 class="question2">
+        {{ question.content }}
+    </h2>
+
+    <form action="{{ path('app_quizz_result') }}" method="POST">
+        <input type="hidden" name="answer1" value={{answer1}} />
+        <input type="hidden" name="answer2" value={{answer2}} />
+        <input type="hidden" name="answer3" value={{answer3}} />
+        <input type="hidden" name="answer4" value={{answer4}} />
+        
+        {# <div class='answer'>
+        {% for answer in answers %}
+            <button type="submit" name="answer5" value="{{ answer.content }}" class='item'>{{ answer.content }}</button>
+        {% endfor %}
+        </div> #}
+
+        <div class="themeSelection">
+            {% for answer in answers %}
+                {% if answer.id == 9 %}
+                    <div class="themeSelect">
+                        <img class="themeSelectImg img-fluid" src="{{ asset('./assets/images/media/branche1.png')}}" alt="branche avec une corde" />
+                        <div class="text-center">
+                            <img class="themeSelectImg img-fluid element" src="{{ asset('./assets/images/media/fiole1.png')}}" alt="fiole pendue à une corde avec un lapin faisant du feu" />
+                        </div>
+                        <div class="themeSelectText">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer5" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if answer.id == 10 %}
+                    <div class="themeSelect">
+                        <img class="themeSelectImg img-fluid" src="{{ asset('./assets/images/media/branche3.png')}}" alt="branche avec une corde" />
+                        <div class="text-center">
+                            <img class="themeSelectImg img-fluid element2" src="{{ asset('./assets/images/media/fiole3.png')}}" alt="fiole pendue à une corde avec un lapin portant un masque de plongée devant de l'eau" />
+                        </div>
+                        <div class="themeSelectText">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer5" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if answer.id == 11 %}
+                    <div class="themeSelect">
+                        <img class="themeSelectImg img-fluid" src="{{ asset('./assets/images/media/branche2.png')}}" alt="branche avec une corde" />
+                        <div class="text-center">
+                            <img class="themeSelectImg img-fluid element3" src="{{ asset('./assets/images/media/fiole2.png')}}" alt="fiole pendue à une corde avec un lapin semant des graines dans la terre" />
+                        </div>
+                        <div class="themeSelectText">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer5" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if answer.id == 12 %}
+                    <div class="themeSelect">
+                        <img class="themeSelectImg img-fluid" src="{{ asset('./assets/images/media/branche4.png')}}" alt="branche avec une corde" />
+                        <div class="text-center">
+                            <img class="themeSelectImg img-fluid element4" src="{{ asset('./assets/images/media/fiole4.png')}}" alt="fiole pendue à une corde avec un lapin regardant un courant d'air dans les roseaux" />
+                        </div>
+                        <div class="themeSelectText">
+                            <div class="answer2Text">{{ answer.content }}</div>
+                            <button type="submit" name="answer5" value="{{ answer.content }}"class="btnSelect" style="margin-top: 3px; margin-bottom: 0px">
+                                <div>Select</div>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </form>
+
+{% endblock %}

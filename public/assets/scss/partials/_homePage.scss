@@ -1,0 +1,220 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: $text-color;
+        text-align: center;
+        padding: 1%;
+    }
+    h3{
+        color: darken($text-color, 10%);
+        font-weight: bold;
+        padding: 1%
+    }
+}
+.about{
+    padding: 0.5% 10% 0.5% 10%;
+}
+.project{
+    p{
+        padding: auto;
+    }
+    div{
+        padding-top: 0.5%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        .img1{
+            width: 100%;
+        }
+        .img2{
+            width: 100%;
+        }
+        .img3{
+            width: 100%;
+        }
+        .img4{
+            width: 100%;
+        }
+    }
+}
+.testimonial{
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/fond2.jpg');
+    padding: 2%;
+    h3{
+        color: $text-color;
+    }
+    .carousel{
+        height: 30vh;
+    }
+    .icon{
+        border-radius: 100%;
+        margin: 2%;
+        background-color: white;
+        width: 10vh;
+    }
+    .content{
+        background-color: $bg-bleu;
+        border-radius: 5px;
+        padding: 2%;
+        margin: 0 15% 0 15%;
+    }
+    .h4Home{
+        font-weight: bold;
+        padding: 1%;
+        margin-top: 2%;
+        text-align: center;
+        text-shadow: 1px 1px 5px darkblue;
+    }
+}
+.services{
+    padding: 2%;
+    p{
+        padding: 1%;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .card{
+            background-color: transparent;
+            border: 0;
+            div{
+                border-radius: 50% 20% / 10% 40%;
+                margin: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2%;
+                h6{
+                    font-weight: bold;
+                    padding-top: 2%;
+                }
+            }
+            .design{
+                background-color: $bg-bleu;
+            }
+            .essayage{
+                background-color: $bg-bleu;
+            }
+            .joy{
+                background-color: $bg-bleu;
+            }
+            .raise:hover,
+            .raise:focus {
+            box-shadow: 0 0.8em 0.5em 0.5em darken($bg, 10%);
+            transform: translateY(-1em);
+            transition-duration: 0.5s;
+            }
+        }
+    }
+}
+
+.numbers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/gallery/33.PNG');
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1%;
+        text-shadow: 1px 1px 5px darkblue;
+        h2{
+            font-weight: bolder;
+        }
+        p{
+            padding: 1%;
+            font-weight: 600;
+        }
+    }
+    .pulse:hover, 
+    .pulse:focus {
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em transparent;
+    }
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 darken($bg-bleu, 30%); }
+    }
+}
+
+
+/////////////////////////////////////////
+/// media queries
+/// 
+@media screen and (max-width: 768px) {
+    .project{
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    .testimonial{
+        background-position: center;
+        background-size: cover;
+        background-image: url('../images/fond2.jpg');
+        padding: 2%;
+        .icon{
+            border-radius: 100%;
+            margin: 2%;
+        }
+        .content{
+            background-color: $bg-bleu;
+            margin: 0 5% 0 5%;
+            padding: 2%;
+            border-radius: 1%;
+        }
+    }
+    .services{
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .card{
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1%;
+                }
+            }
+        }
+    }
+    .numbers{
+        background-position: center;
+        background-size: cover;
+        background-image: url('../images/gallery/33.PNG');
+    }
+}
+
+@media screen and (max-width: 600px){
+    .project{
+        div{
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+    .testimonial{
+        background-position: center;
+        background-size: cover;
+        background-image: url('../images/fond2.jpg');
+        padding: 2%;
+        .content{
+            margin: 0 5% 0 5%;
+            padding: 3%;
+            border-radius: 1%;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.size{
+	max-height: 100vh;
+}
+.btnSelect3{
+    background-color: transparent;
+    border-color: transparent;
+}
+.sizeSelect {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	button {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+}
+.sizeSelection {
+	display: flex;
+	display: flex;
+	justify-content: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: row;
+	padding-bottom: 2%;
+	position: relative;
+	align-items: center;
+}
+.sizeSelectImg {
+	width: 90%;
+	height: 600px;
+	object-fit: cover;
+}
+img {
+	transition: all .25s ease-in-out;
+	border-style: none;
+}
+.sizeSelectText {
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.answer3Text {
+	font-size: 24px;
+	line-height: 1.33;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 1.25;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	.sizeSelect {
+		flex-direction: column;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.sizeSelection {
+		display: flex;
+		display: flex;
+		flex-direction: column;
+		flex-direction: column;
+		justify-content: center;
+		justify-content: center;
+	}
+}

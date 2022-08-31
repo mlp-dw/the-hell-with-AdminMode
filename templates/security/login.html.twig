@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+    <div class="container-lg d-flex flex-column">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 col-lg-5 py-10 py-md-12 text-center">
+
+            <!-- Heading -->
+            <h1 class="display-4 mb-4">
+              Connexion
+            </h1>
+
+            <!-- Text -->
+            <p class="text-muted">
+              Vous n'avez pas encore de compte ? <a href="{{ path('app_register') }}">Créer un compte</a>
+            </p>
+
+            <!-- Form -->
+            <form method="post" class="mb-6">
+              <!-- Email -->
+              <div class="form-group">
+                <label class="visually-hidden" for="authEmail">
+                  Your email
+                </label>
+                <input type="email" value="{{ last_username }}" name="email" class="form-control" autocomplete="email" required autofocus id="authEmail" placeholder="Your email">
+              </div>
+              <!-- Password -->
+              <div class="form-group">
+                <div class="input-group inpit-group-merge">
+                  <input class="form-control my-3" id="authPassword" placeholder="Your password" type="password" name="password"  autocomplete="current-password" requiredtype="password" aria-label="Your password" aria-describedby="authPasswordCaption">
+                </div>
+              </div>
+              <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+              {#
+                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                See https://symfony.com/doc/current/security/remember_me.html
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Remember me
+                    </label>
+                </div>
+              #}
+              <!-- Button -->
+              <button class="btn w-100 btn-outline-light">
+                Go !
+              </button>
+            </form>
+          </div>
+
+          <div class="col-lg-6 offset-lg-1 align-self-stretch d-none d-lg-block taller">
+            <!-- Image -->
+            <div class="h-100 vw-50  imgLogIn"></div>
+          </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

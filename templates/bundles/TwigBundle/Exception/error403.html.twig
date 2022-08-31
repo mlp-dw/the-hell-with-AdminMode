@@ -1,0 +1,78 @@
+{# 403 – Accès Interdit -
+le serveur comprend bien la requête du client, mais pour certaines raisons, refuse de répondre #}
+{% extends "base.html.twig" %}
+
+{% block title %}Accès Interdit{% endblock %}
+{% block body %}
+<section class="error-body d-flex align-items-center  py-5" style="background: radial-gradient(144.3% 173.7% at 71.41% 94.26%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 32.49%, rgba(241, 244, 253, 0.07) 82.52%);">
+        <div class="container my-5 text-md-start text-center">
+            <div class="row align-items-center ">
+
+                <!-- Animation -->
+                <div class="col-xl-6 col-md-7 ms-n5 py-5">
+                    <div class="system">
+                        <div class="system__orbit system__orbit--sun">
+                            <img src="{{ asset('assets/images/media/sun.png')}}" alt="Sun" class="system__icon system__icon--sun">
+                        </div>
+                        
+                        <div class="system__orbit system__orbit--mercury">
+                            <div class="system__planet system__planet--mercury">
+                                <img src="{{ asset('assets/images/media/mercury.png')}}" alt="Mercure">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--venus">
+                            <div class="system__planet system__planet--venus">
+                                <img src="{{ asset('assets/images/media/venus.png')}}" alt="Venus">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--earth">
+                            <div class="system__planet system__planet--earth">
+                                <img src="{{ asset('assets/images/media/earth.png')}}" alt="Terre">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--mars">
+                            <div class="system__planet system__planet--mars">
+                                <img src="{{ asset('assets/images/media/mars.png')}}" alt="Mars">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--jupiter">
+                            <div class="system__planet system__planet--jupiter">
+                                <img src="{{ asset('assets/images/media/jupiter.png')}}" alt="Jupiter">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--saturn">
+                            <div class="system__planet system__planet--saturn">
+                                <img src="{{ asset('assets/images/media/saturn.png')}}" alt="Saturne">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--uranus">
+                            <div class="system__planet system__planet--uranus">
+                                <img src="{{ asset('assets/images/media/uranus.png')}}" alt="Uranus">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--neptune">
+                            <div class="system__planet system__planet--neptune">
+                                <img src="{{ asset('assets/images/media/neptune.png')}}" alt="Neptune">
+                            </div>
+                        </div>
+                        <div class="system__orbit system__orbit--pluto">
+                            <div class="system__planet system__planet--pluto">
+                                <img src="{{ asset('assets/images/media/pluto.png')}}" alt="Pluton">
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+
+                <!-- Text -->
+                <div class="col-md-5 offset-xl-1">
+                    <h1 class="display-1 mb-sm-4 mt-n4 mt-sm-n5">Erreur 403</h1>
+                    <p class="mb-md-5 mb-4 mx-md-0 mx-auto pb-2 lead">L'accès à cette page est interdit</p>
+                    <a href="{{path('app_home')}}" class="btn btn-lg btn btn-outline-light  w-sm-auto w-100">
+                        🚀 Retourner à la page d'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+
+{% endblock %}

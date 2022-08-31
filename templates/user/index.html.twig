@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <div class="d-flex flex-row ps-5 align-items-center my-2">
+        <a class="btn btn-outline-light ms-5 my-2" href="{{ path('app_profile') }}">Retour</a>
+        <h2 class="ms-5">Tous les utilisateurs sont ici !</h2>
+        <a class="btn btn-outline-light ms-5" href="{{ path('app_register') }}">Ajouter un utilisateur</a>
+    </div>
+    <div class="table-responsive d-flex justify-content-center">
+        <table class="table-dark">
+            <thead>
+                <tr>
+                    <th class="p-3">Id</th>
+                    <th class="p-3">Email</th>
+                    <th class="p-3">Roles</th>
+                    <th class="p-3">Nom</th>
+                    <th class="p-3">Compte Vérifié ?</th>
+                    <th class="p-3">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class="text-center p-3">{{ user.id }}</td>
+                    <td class="text-center p-3">{{ user.name }}</td>
+                    <td class="text-center p-3">{{ user.email }}</td>
+                    <td class="text-center p-3">{{ user.roles ? user.roles|json_encode : '' }}</td>
+                    <td class="text-center p-3">{{ user.isVerified ? 'Yes' : 'No' }}</td>
+                    <td class="text-center p-3">
+                        <a class="btn btn-outline-light m-1" href="{{ path('app_profile_users', {'id': user.id}) }}">Voir</a>
+                        <a class="btn btn-outline-light m-1" href="{{ path('app_profile_edit', {'id': user.id}) }}">Modifier</a>
+                        {{ include('user/_delete_form2.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
